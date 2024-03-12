@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+			 background-image: url("image/compnay.jpg"); /* Update the path to your image */
+             background-size:contain;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+			 background-image: url("image/compnay.jpg"); /* Update the path to your image */
+             background-size:contain;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 70%;
+           height: 85%;
+           opacity: 1;
+             /* Added max-width for responsiveness */
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px; /* Added margin for separation */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left; /* Align labels to the left */
+        }
+
+        select, input[type="text"], input[type="password"], input[type="date"], input[type="submit"], button {
+            width: 100%; /* Full width for input elements */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"], button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover, button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        window.onload = function() {           
+            const urlParams = new URLSearchParams(window.location.search);
+            const error = urlParams.get('error');
+            if (error === 'alreadytruck') {
+                alert('This Truck is Already Working in our Company ');                  
+            }
+             
+            
+            
+        };
+    </script>
+</head>
+<body> 
+    <div class="login-container">  
+         <h2>Admin Desk</h2>
+				 <lable style='padding-right: 20px;'><a href='showmanager'>Manager</a></lable>
+				 <lable style='padding-right: 20px;'><a href='createmanager.html'>Create New Manager</a></lable> 
+				 <lable style='padding-right: 20px;'><a href='installtruck.html'>Install New Service</a></lable>   
+				 <lable style='padding-right: 20px;'><a href='showruck'>Show Service</a></lable>
+				 <lable style='padding-right: 20px;'><a href='adminservice'>Service</a></lable>
+				  <lable style='padding: 5px;'><a href='user.html' style='color: red;'>LOGOUT</a></lable><br><br>
+        <form action="installtruck" method="post"> 
+            
+            <label>Truck Model:</label>
+            <input type="text" name="model" placeholder="2015-Company Name" required>
+            <label>Truck No.:</label>
+            <input type="text" name="tnumber" placeholder="RJ-21-UB-7656" pattern="^[A-Za-z]{2}-[0-9]{1,2}-[A-Za-z]{1,2}-[0-9]{1,4}$" required>
+            <label>RC No.:</label>
+            <input type="text" name="rcnumber" required>
+            <label>Insurance:</label>
+            <input   type="radio" name="insurance" value="YES" onclick="Yes()" required>YES
+            <input   type="radio" name="insurance" value="NO" onclick="no()" required>NO <br><br>  
+            
+             <div id="insuranceInput" style="display: none;">
+            <label>If Yes then Insurance Company Name:</label>
+            <input type="text" name="InsuranceCompany">
+            </div>
+        
+            <label>Owner:</label>
+            <input type="text" name="owner" required>
+            <label>Mobile:</label>
+            <input type="text" name="mobileno" pattern="[0-9]{10}" required>
+            <label>Route-From:</label>
+            <select id="type" name="frombranch">
+                <option value="" selected disabled>Select Branch</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Channi">Channi</option>
+                <option value="Kanpur">Kanpur</option>
+                <option value="Hariyana">Hariyana</option>
+            </select>
+            <label>To:</label>
+                <select id="type" name="tobranch">
+                <option value="" selected disabled>Select Branch</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Channi">Channi</option>
+                <option value="Kanpur">Kanpur</option>
+                <option value="Hariyana">Hariyana</option>
+            </select> 
+            <button type="submit">Add New Truck</button>
+              
+        </form>
+    </div>
+ <script>
+        function Yes() { 
+          var insuranceInput = document.getElementById("insuranceInput");
+            insuranceInput.style.display = "block";
+        }
+          function no() { 
+          var insuranceInput = document.getElementById("insuranceInput");
+            insuranceInput.style.display = "none";
+        }
+    </script>
+    
+</body>
+</html>

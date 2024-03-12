@@ -1,0 +1,120 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+			 background-image: url("image/compnay.jpg"); /* Update the path to your image */
+             background-size:contain;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+			 
+			 background-image: url("image/compnay.jpg"); /* Update the path to your image */
+             background-size:contain;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+           opacity: 1;
+           width: 70%;
+           height: 70%;
+        }
+     .branch{ 
+		 position: relative;
+		 justify-content: center;
+		     background-color: #fff;
+            padding: 0px;
+            border-radius: 0px;
+            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+           opacity: 1;
+           width: 26%;
+           height: 30%;
+           }
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select, input[type="text"], input[type="password"], input[type="submit"] {
+            width: 100%; 
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            text-align: right;
+        }
+
+        a { 
+            color: #007bff;
+            text-decoration: none;
+        }
+       
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>COMPANY CONTECT </h2>
+        <marquee style="color: red;">Our Services in City :  Jaipur  Delhi Mumbai Channi Kanpur Hariyana</marquee>
+        <lable style="padding-right: 20px; "><a href="bookservice">book service</a></lable>
+       <lable style="padding-right: 20px;  "><a href="userservicecheck">check service</a></lable> 
+       <lable style="padding-right: 20px; "><a href="contect.html">contect us</a></lable>   
+       <lable style="padding: 5px;  "><a href="user.html" style="color: red;">LOGOUT</a></lable><br><br>  
+        <p><lable >Head Office :Nehru Colony,PHQ Jaipur </lable></p>
+        <p><lable >Email : pukharajlol2018@gmail.com</lable></p>
+        <p><lable >Telephone : 0141-253698,256987 </lable></p>
+        <p><lable >Phone : 9610529191,7742136750 </lable></p>
+        <p><lable >Fax : 212-2365-2698 </lable></p> 
+        <lable style="color: brown;"><strong>Regional Office:</strong></lable>   
+        <a style="padding-right: 20px;" onclick="showImage('image/1.jpg')" > Jaipur</a>
+        <a style="padding-right: 20px;" onclick="showImage('image/2.jpg')"> Hariyana</a>
+        <a style="padding-right: 20px;" onclick="showImage('image/3.jpg')"> Kanpur</a>
+        <a style="padding-right: 20px;" onclick="showImage('image/4.jpg')"> Channi</a>
+        <a style="padding-right: 20px;" onclick="showImage('image/5.jpg')"> Delhi</a>
+        <a style="padding-right: 20px;" onclick="showImage('image/6.jpg')"> Mumbai</a>  
+       <div class="branch">   
+        <img id="image" src="image/compnay.jpg"  style="background-size:contain;width: 270%; height: 170%; position: absolute;">  
+    </div> 
+    <script>
+        function showImage(imageSrc) {
+            var image = document.getElementById('image');
+            image.src = imageSrc;
+        }
+          </script>  
+</body>
+</html>

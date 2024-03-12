@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body { background-image: url("image/compnay.jpg"); /* Update the path to your image */
+             background-size:contain; 
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+			 background-image: url("image/compnay.jpg"); /* Update the path to your image */
+             background-size:contain; 
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          opacity: 1;
+           width: 50%;
+           height: 50%;
+        }
+    
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select, input[type="text"], input[type="password"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+    </style>
+    <script>
+        window.onload = function() {       
+            const urlParams = new URLSearchParams(window.location.search);
+            const error = urlParams.get('error');
+            
+            if (error === 'incorrect') {
+                alert('Incorrect username or password. Please try again.'); 
+                                 
+            }
+        };
+    </script>
+</head>
+<body>
+	
+    <div class="login-container">  
+		 
+        <h2>Admin Login Form </h2>
+        
+        <form action="adminServlet"> 
+            <input type="text" id="username" placeholder="Enter Username" name="username" required>
+            <br><br>
+            
+            <input type="password" id="password" placeholder="Enter Password" name="password" required>
+            <br><br>
+            <input type="submit" value="Login">
+        </form>
+        <br>
+        <a  href="user.html"><Strong>Home</Strong></a>
+    </div>
+    
+</body>
+</html>

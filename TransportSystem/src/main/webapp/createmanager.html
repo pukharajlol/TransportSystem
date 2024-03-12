@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+			 background-image: url("image/compnay.jpg"); /* Update the path to your image */
+             background-size:contain;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 60%;
+           height: 80%;
+             /* Added max-width for responsiveness */
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px; /* Added margin for separation */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left; /* Align labels to the left */
+        }
+
+        select, input[type="text"], input[type="email"], input[type="date"], input[type="submit"], button {
+            width: 100%; /* Full width for input elements */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"], button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover, button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body> 
+    <n class="login-container">
+    
+       <h2>Admin Desk</h2> 
+       <lable style="padding-right: 20px; "><a href="showmanager">Manager</a></lable>
+       <lable style="padding-right: 20px;  "><a href="createmanager.html">Create New Manager</a></lable> 
+       <lable style="padding-right: 20px; "><a href="installtruck.html">Install New Service</a></lable>   
+       <lable style="padding-right: 20px; "><a href="showruck">Show Service</a></lable>
+       <lable style="padding-right: 20px; "><a href="adminservice">Service</a></lable>
+        <lable style="padding: 5px;  "><a href="user.html" style="color: red;">LOGOUT</a></lable><br><br>  
+        <form action="createmanager"> 
+            <label>Select Branch:</label>
+            <select id="type" name="branch" >
+                <option value="" selected disabled>Select Branch</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Channi">Channi</option>
+                <option value="Kanpur">Kanpur</option>
+                <option value="Hariyana">Hariyana</option>
+            </select>
+            <label>User Name:</label>
+            <input type="text" name="uname" required>
+            <label>User Email:</label>
+            <input type="email" name="email" required>
+            <label>Date Of Joining:</label>
+            <input type="date" name="doj" required>
+            <label>Date Of Birth:</label>
+            <input type="date" name="dob" required>
+            <label>Salary:</label>
+            <input type="text" name="salary" required>
+             <label>Mobile No.:</label>
+            <input type="text" name="mobile" pattern="[0-9]{10}" required>
+            <button type="submit">Create Manager</button> 
+        </form>
+    </div>
+</body>
+</html>
